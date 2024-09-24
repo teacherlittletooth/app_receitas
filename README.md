@@ -1,3 +1,2 @@
-# login
-
-A new Flutter project.
+# app_receitas
+Aplicativo criado para estudos de Flutter.
