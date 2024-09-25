@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:login/bottomnav.dart';
 import 'package:login/card.dart';
 import 'package:login/drawer.dart';
+import 'package:login/search.dart';
 import 'package:login/story.dart';
 
 class MyHome extends StatefulWidget {
@@ -41,44 +43,51 @@ class _MyHomeState extends State<MyHome> {
         ],
       ),
 
-      body: Column(
-        children: <Widget>[
-      
-          SizedBox(
-            height: 140,
-            child: ListView.builder(
-              scrollDirection: Axis.horizontal,
-              itemCount: _dados.length,
-              itemBuilder: (context, item) {
-                return MyStory(
-                  nome: _dados[item]["n"],
-                  imagem: _dados[item]["i"],
-                );
-              }
+      body: SingleChildScrollView(
+        child: Column(
+          children: <Widget>[
+        
+            const MySearch(),
+
+            SizedBox(
+              height: 140,
+              child: ListView.builder(
+                scrollDirection: Axis.horizontal,
+                itemCount: _dados.length,
+                itemBuilder: (context, item) {
+                  return MyStory(
+                    nome: _dados[item]["n"],
+                    imagem: _dados[item]["i"],
+                  );
+                }
+              ),
             ),
-          ),
-
-          const Divider(
-            indent: 20,
-            endIndent: 20,
-          ),
-
-          SizedBox(
-            height: 220,
-            child: ListView.builder(
-              scrollDirection: Axis.horizontal,
-              itemCount: _img.length,
-              itemBuilder: (context, i) {
-                return MyCard(
-                  url: _img[i]["i"],
-                  titulo: _img[i]["t"]
-                );
-              }
+        
+            const Divider(
+              indent: 20,
+              endIndent: 20,
             ),
-          ),
-
-        ],
+        
+            SizedBox(
+              height: 220,
+              child: ListView.builder(
+                scrollDirection: Axis.horizontal,
+                itemCount: _img.length,
+                itemBuilder: (context, i) {
+                  return MyCard(
+                    url: _img[i]["i"],
+                    titulo: _img[i]["t"]
+                  );
+                }
+              ),
+            ),
+        
+          ],
+        ),
       ),
+
+      bottomNavigationBar: const MyBottomNav(),
+
     );
   }
 }
