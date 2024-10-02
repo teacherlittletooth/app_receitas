@@ -1,0 +1,37 @@
+[
+    {
+        "nome" : "Bella Gulla",
+        "endereco" : "Rua da Pátria, 123",
+        "telefone" : "(51)99889.8899",
+        "foto" : ""
+    },
+
+    {
+        "nome" : "Forno Quente",
+        "endereco" : "Av. dos Professores, 321",
+        "telefone" : "(51)97554.4321",
+        "foto" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGasFrz2OO1m1gr8GTp3UjcwnC7GelfQMZKg&s"
+    },
+
+    {
+        "nome" : "Panela de Ferro",
+        "endereco" : "Av. Pacificador, 789",
+        "telefone" : "(51)94566.3323",
+        "foto" : "https://media-cdn.tripadvisor.com/media/photo-s/09/a9/e7/89/restaurante-panela-de.jpg"
+    },
+
+    {
+        "nome" : "Franguito Penacho",
+        "endereco" : "Rua Cássia Santa, 456",
+        "telefone" : "(51)9854.3214",
+        "foto" : ""
+    },
+
+    {
+        "nome" : "É us Guri",
+        "endereco" : "Rua Silvano Solito, 45",
+        "telefone" : "(51)98552.4466",
+        "foto" : ""
+    }
+
+]

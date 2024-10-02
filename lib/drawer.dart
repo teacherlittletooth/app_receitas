@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:login/restaurant.dart';
 
 class MyDrawer extends StatefulWidget {
   const MyDrawer({super.key});
@@ -43,7 +44,12 @@ class _MyDrawerState extends State<MyDrawer> {
                 size: 20,
               ),
               title: Text("Restaurantes"),
-              onTap: (){},
+              onTap: (){
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const MyRestaurant() )
+                );
+              },
             ),
         
             ListTile(
