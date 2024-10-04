@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:login/bottomnav.dart';
 import 'package:login/card.dart';
 import 'package:login/drawer.dart';
+import 'package:login/popup.dart';
 import 'package:login/search.dart';
 import 'package:login/story.dart';
 
@@ -36,10 +37,7 @@ class _MyHomeState extends State<MyHome> {
       appBar: AppBar(
         title: const Text("Receitas"),
         actions: <Widget>[
-          IconButton(
-            onPressed: (){},
-            icon: const Icon(Icons.more_vert)
-          )
+          MyPopup()
         ],
       ),
 

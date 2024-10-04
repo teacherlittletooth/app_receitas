@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:login/restaurant.dart';
+import 'package:http/http.dart' as http;
 
 class MyDrawer extends StatefulWidget {
   const MyDrawer({super.key});
@@ -15,6 +16,13 @@ class _MyDrawerState extends State<MyDrawer> {
     setState(() {
       _value = t;
     });
+  }
+
+  final Uri uri = Uri.parse("https://teacherlittletooth.github.io/receitas_api/receitas/todas");
+
+  Future _getApi() async {
+    http.Response resp = await http.get(uri);
+    print(resp.body);
   }
   
   @override
@@ -58,7 +66,7 @@ class _MyDrawerState extends State<MyDrawer> {
                 size: 20,
               ),
               title: Text("Salgados"),
-              onTap: (){},
+              onTap: _getApi,
             ),
         
             ListTile(
@@ -67,6 +75,15 @@ class _MyDrawerState extends State<MyDrawer> {
                 size: 20,
               ),
               title: Text("Doces"),
+              onTap: (){},
+            ),
+
+            ListTile(
+              leading: Icon(
+                Icons.coffee_outlined,
+                size: 20,
+              ),
+              title: Text("Agridoces"),
               onTap: (){},
             ),
         
